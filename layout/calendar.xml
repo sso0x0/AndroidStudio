@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    <!-- 윗부분 (뒤로가기버튼, 제목) -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_gray"
+            android:text="뒤로가기" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일정 예약하기"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#328074"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/calendarV" />
+
+    <!-- 제목 입력 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutTitle">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="제목 : "
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#328074" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="일정 제목을 입력하세요."
+            android:id="@+id/edtTitle" />
+    </LinearLayout>
+
+    <!-- 시간 입력 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:id="@+id/layoutTime">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시간 : "
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#328074" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="00시"
+            android:id="@+id/edtHour" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" : " />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="00분"
+            android:id="@+id/edtMin" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#328074"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/txtResult" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_green"
+        android:text="예약하기"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:id="@+id/btnSubmit" />
+
+</LinearLayout>
