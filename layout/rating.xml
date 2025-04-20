@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <!-- 윗부분 (뒤로가기버튼, 제목) -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_gray"
+            android:text="뒤로가기" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="평점 남기기"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#328074"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <!-- 지역 목록 (서울, 부산, 제주만 추가) -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="서울 (Seoul)"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#328074"
+                    android:layout_marginBottom="10dp" />
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/seoul" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍 서울, 대한민국의 수도이자 최대 도시!"
+                    android:textSize="12dp"
+                    android:layout_marginBottom="10dp" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="선택하기"
+                    android:textColor="#328074"
+                    android:id="@+id/btnRati1" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="부산 (Busan)"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#328074"
+                    android:layout_marginBottom="10dp" />
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/busan" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍 부산, 바다와 시장이 함께하는 여행지!"
+                    android:textSize="12dp"
+                    android:layout_marginBottom="10dp" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="선택하기"
+                    android:textColor="#328074"
+                    android:id="@+id/btnRati2" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제주 (Jeju)"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#328074"
+                    android:layout_marginBottom="10dp" />
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/jeju" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍 제주, 자연과 힐링의 섬!"
+                    android:textSize="12dp"
+                    android:layout_marginBottom="10dp" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="선택하기"
+                    android:textColor="#328074"
+                    android:id="@+id/btnRati3" />
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+내
+    <!-- 스크롤뷰 밑 부분 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이곳에 대한 평점을 남겨주세요!"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/textV" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:rating="0"
+        android:layout_marginBottom="24dp"
+        android:id="@+id/rati" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_green"
+        android:text="평점 남기기"
+        android:textColor="#ffffff"
+        android:textSize="16dp"
+        android:id="@+id/btnRatiFinish" />
+</LinearLayout>
