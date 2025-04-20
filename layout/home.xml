@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:text="토박이 메인화면"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#328074"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="70dp"
+        android:gravity="center_horizontal">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/imgV"
+                    android:src="@drawable/seoul"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍 서울 랜드마크, 여행 중 꼭 들러야 할 장소!"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:id="@+id/textV"
+                    android:padding="16dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 버튼 목록 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="16dp">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/round_green"
+                android:text="구글맵 검색하기"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                android:id="@+id/btnGoogle" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/round_green"
+                android:text="캘린더에 일정 예약하기"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                android:id="@+id/btnCalendar" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/round_green"
+                android:text="평점 남기기"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                android:id="@+id/btnRating" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
